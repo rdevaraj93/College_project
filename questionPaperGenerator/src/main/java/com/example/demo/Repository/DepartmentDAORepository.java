@@ -12,33 +12,33 @@ import com.example.demo.dto.ProcedureOutputResponceBean;
 @Repository
 public class DepartmentDAORepository extends DataBaseAdapter{
 
-public ProcedureOutputResponceBean departmentAddOrUpdate(DepartmentAddOrUpdateBean departmentaddorupdatebean) {
-		
-		ProcedureOutputResponceBean outputbean = new ProcedureOutputResponceBean();
-		//System.out.println("User Add is working fine ------------------>");
-		String pkguseraddorupdate =  "{call pkg_create_update_Department(?,?,?,?,?)}";
-		
-		try(Connection connection = getJDBConnection();
-				CallableStatement callablestatement = getCallableStatement(connection, pkguseraddorupdate)){
-			 
-			callablestatement.setInt(1, departmentaddorupdatebean.getDepartmentId()); 
-			callablestatement.setString(2, departmentaddorupdatebean.getDepartmentName());
-			callablestatement.registerOutParameter(3, java.sql.Types.INTEGER);
-			callablestatement.registerOutParameter(4, java.sql.Types.INTEGER);
-			callablestatement.registerOutParameter(5, java.sql.Types.VARCHAR);	
-			callablestatement.executeUpdate();
-			outputbean.setPo_new_id(callablestatement.getInt(3));
-			outputbean.setPo_success_flag(callablestatement.getInt(4));
-			outputbean.setPo_message(callablestatement.getString(5));
+	public ProcedureOutputResponceBean departmentAddOrUpdate(DepartmentAddOrUpdateBean departmentaddorupdatebean) {
 			
-		} catch (SQLException e) {
-			e.printStackTrace();
-			System.out.println("Exception Occured");
-		}
+			ProcedureOutputResponceBean outputbean = new ProcedureOutputResponceBean();
+			//System.out.println("User Add is working fine ------------------>");
+			String pkguseraddorupdate =  "{call pkg_create_update_Department(?,?,?,?,?)}";
+			
+			try(Connection connection = getJDBConnection();
+					CallableStatement callablestatement = getCallableStatement(connection, pkguseraddorupdate)){
+				 
+				callablestatement.setInt(1, departmentaddorupdatebean.getDepartmentId()); 
+				callablestatement.setString(2, departmentaddorupdatebean.getDepartmentName());
+				callablestatement.registerOutParameter(3, java.sql.Types.INTEGER);
+				callablestatement.registerOutParameter(4, java.sql.Types.INTEGER);
+				callablestatement.registerOutParameter(5, java.sql.Types.VARCHAR);	
+				callablestatement.executeUpdate();
+				outputbean.setPo_new_id(callablestatement.getInt(3));
+				outputbean.setPo_success_flag(callablestatement.getInt(4));
+				outputbean.setPo_message(callablestatement.getString(5));
+				
+			} catch (SQLException e) {
+				e.printStackTrace();
+				System.out.println("Exception Occured");
+			}
+			
+			return outputbean;
 		
-		return outputbean;
-	
-	}
+		}
 	
 public ProcedureOutputResponceBean departmentDelete(Integer depart_id) {
 		

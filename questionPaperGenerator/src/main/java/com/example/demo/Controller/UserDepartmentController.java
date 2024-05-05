@@ -1,6 +1,7 @@
 package com.example.demo.Controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -14,6 +15,7 @@ import com.example.demo.dto.UserDepartAddOrUpdateBean;
 
 @RestController
 @RequestMapping("/userdepart/")
+@CrossOrigin("http://localhost:3000/")
 public class UserDepartmentController {
 
 	@Autowired

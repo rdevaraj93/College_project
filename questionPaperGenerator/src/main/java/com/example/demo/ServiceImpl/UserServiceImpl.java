@@ -38,21 +38,15 @@ public class UserServiceImpl implements UserService{
 	}
 
 	@Override
-	public ProcedureOutputResponceBean getUserByID(Integer userid) {
+	public UserEntity getUserByID(Integer userid) {
 		ProcedureOutputResponceBean outputbean = new ProcedureOutputResponceBean();
-		List<UserEntity> userDetailsList = userrepository.getUserByID(userid);
-		for (UserEntity userEntity : userDetailsList) 
-		{
-			System.out.println("****************************");
-			System.out.println("User Id "+userEntity.getUseridpk());
-			System.out.println("User dispalyname "+userEntity.getUserdisplayname());
-			System.out.println("User rollID "+userEntity.getUserrollid());
-			System.out.println("User paswod "+userEntity.getUserpassword());
-		}
+		UserEntity userDetailsList = userrepository.getUserByID(userid);
+
 		outputbean.setPo_new_id(Constants.SUCCESS_INTERGER_VALUE);
 		outputbean.setPo_success_flag(Constants.SUCCESS_FLAG_VALUE);
 		outputbean.setPo_message(Constants.SUCCESS);
-		return   outputbean;
+		
+		return userDetailsList;
 	}
 
 	@Override
@@ -60,14 +54,6 @@ public class UserServiceImpl implements UserService{
 		ProcedureOutputResponceBean outputbean = new ProcedureOutputResponceBean();
 		List<UserEntity> userDetailsList = userrepository.getUserByRollID(userrollid);
 		
-		for (UserEntity userEntity : userDetailsList) 
-		{
-			System.out.println("****************************");
-			System.out.println("User Id "+userEntity.getUseridpk());
-			System.out.println("User dispalyname "+userEntity.getUserdisplayname());
-			System.out.println("User rollID "+userEntity.getUserrollid());
-			System.out.println("User paswod "+userEntity.getUserpassword());
-		}
 		outputbean.setPo_new_id(Constants.SUCCESS_INTERGER_VALUE);
 		outputbean.setPo_success_flag(Constants.SUCCESS_FLAG_VALUE);
 		outputbean.setPo_message(Constants.SUCCESS);
@@ -76,7 +62,7 @@ public class UserServiceImpl implements UserService{
 	}
 	
 	@Override
-	public ProcedureOutputResponceBean getUserlist() {
+	public List<UserEntity> getUserlist() {
 		ProcedureOutputResponceBean outputbean = new ProcedureOutputResponceBean();
 		List<UserEntity> userDetailsList = userrepository.getUserlist();
 		
@@ -103,7 +89,7 @@ public class UserServiceImpl implements UserService{
 			outputbean.setPo_message(Constants.FAILURE);
 		}		
 		
-		return   outputbean;
+		return   userDetailsList;
 		
 	}
 
@@ -145,15 +131,6 @@ public class UserServiceImpl implements UserService{
 			outputbean.setPo_message(Constants.FAILURE);
 		}
 		
-		//List<UserEntity> userDetailsList = userrepository.getUserlist();
-//		for (UserEntity userEntity : userDetailsList) 
-//		{
-//			System.out.println("****************************");
-//			System.out.println("User Id "+userEntity.getUseridpk());
-//			System.out.println("User dispalyname "+userEntity.getUserdisplayname());
-//			System.out.println("User rollID "+userEntity.getUserrollid());
-//			System.out.println("User paswod "+userEntity.getUserpassword());
-//		}
 		return outputbean;
 	}
 	

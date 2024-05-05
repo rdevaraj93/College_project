@@ -14,7 +14,7 @@ import com.example.demo.Entity.UserEntity;
 public interface UserRepository extends  CrudRepository<UserEntity, Integer> {
 
 	@Query("SELECT userentitylist FROM UserEntity userentitylist WHERE useridpk in (:userid)")
-	List<UserEntity> getUserByID(Integer userid);
+	UserEntity getUserByID(Integer userid);
 	
 	@Query("SELECT userentitylist FROM UserEntity userentitylist WHERE userrollid in (:userrollid)")
 	List<UserEntity> getUserByRollID(String userrollid);

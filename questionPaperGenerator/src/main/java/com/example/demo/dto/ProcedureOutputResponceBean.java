@@ -9,8 +9,6 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Data
-@NoArgsConstructor
-@AllArgsConstructor
 @Getter
 @Setter
 public class ProcedureOutputResponceBean implements Serializable {
@@ -59,12 +57,5 @@ public class ProcedureOutputResponceBean implements Serializable {
 	public void setPo_message(String po_message) {
 		this.po_message = po_message;
 	}
-	
-	
-	 
-	 
-	
-	
-	
 	
 }

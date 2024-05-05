@@ -1,0 +1,16 @@
+#exam mark
+property_exam_is_ten_mark 		= 10
+property_exam_is_twenty_mark 	= 20
+property_exam_is_fifty_mark 	= 50
+property_exam_is_hundred_mark 	= 100
+---
+#Question Deficalty
+property_easy_id= 1
+property_medium_id	= 2
+property_hard_id	= 3
+---
+#Uestion mark
+property_one_mark_id 	= 1
+property_two_mark_id 	= 2
+property_five_mark_id 	= 3
+property_ten_mark_id 	= 4

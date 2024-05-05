@@ -1,0 +1,141 @@
+mark:
+    withoutoptional:
+       totaltenmark:
+          onemarkquestion: #3
+             easy: 1
+             medium: 1
+             hard: 1
+          Twomarkquestion: #1
+             easy: 0
+             medium: 1
+             hard: 0
+          Fivemarkquestion:  #1
+             easy: 1
+             medium: 0
+             hard: 0
+          Tenmarkquestion: #0
+             easy: 0
+             medium: 0
+             hard: 0
+       totaltwentymark:
+          onemarkquestion: #4
+             easy: 2
+             medium: 1
+             hard: 1
+          Twomarkquestion: #3
+             easy: 1
+             medium: 1
+             hard: 1
+          Fivemarkquestion:  #2
+             easy: 1
+             medium: 1
+             hard: 0
+          Tenmarkquestion: #0
+             easy: 0
+             medium: 0
+             hard: 0   
+       totalfiftymark:
+          onemarkquestion: #5
+             easy: 2
+             medium: 2
+             hard: 1
+          Twomarkquestion: #5
+             easy: 2
+             medium: 2
+             hard: 1
+          Fivemarkquestion:  #3
+             easy: 1
+             medium: 1
+             hard: 1
+          Tenmarkquestion: #2
+             easy: 1
+             medium: 0
+             hard: 1     
+       totalhundredmark:
+          onemarkquestion: #10
+             easy: 5
+             medium: 3
+             hard: 2
+          Twomarkquestion: #10
+             easy: 4
+             medium: 4
+             hard: 2
+          Fivemarkquestion:  #6
+             easy: 2
+             medium: 2
+             hard: 2
+          Tenmarkquestion: #4
+             easy: 2
+             medium: 1
+             hard: 1     
+    withoptional:
+       totaltenmark:
+          onemarkquestion: #3
+             easy: 1
+             medium: 1
+             hard: 1
+          Twomarkquestion: #1
+             easy: 1
+             medium: 0
+             hard: 0
+          Fivemarkquestion:  #1
+             easy: 1
+             medium: 0
+             hard: 0
+          Tenmarkquestion: #0
+             easy: 0
+             medium: 0
+             hard: 0
+       totaltwentymark:
+          onemarkquestion: #4
+             easy: 2
+             medium: 1
+             hard: 1
+          Twomarkquestion: #3
+             easy: 1
+             medium: 1
+             hard: 1
+          Fivemarkquestion:  #3
+             easy: 1
+             medium: 1
+             hard: 1
+          Tenmarkquestion: #0
+             easy: 0
+             medium: 0
+             hard: 0   
+       totalfiftymark:
+          onemarkquestion: #5 Answer All the question
+             easy: 2
+             medium: 2
+             hard: 1
+          Twomarkquestion: #5 Answer All the question
+             easy: 2
+             medium: 2
+             hard: 1
+          Fivemarkquestion:  #4 Answer 3 the question
+             easy: 2
+             medium: 1
+             hard: 1
+          Tenmarkquestion: #3 Answer 2 the question
+             easy: 1
+             medium: 1
+             hard: 1     
+       totalhundredmark:
+          onemarkquestion: #10 Answer All the question
+             easy: 5
+             medium: 3
+             hard: 2
+          Twomarkquestion: #10 Answer All the question
+             easy: 4
+             medium: 4
+             hard: 2
+          Fivemarkquestion:  #9 Answer any 6 Question
+             easy: 3
+             medium: 3
+             hard: 3
+          Tenmarkquestion: #6 Answer any 4 Question
+             easy: 2
+             medium: 2
+             hard: 2                           
+---  
+            
